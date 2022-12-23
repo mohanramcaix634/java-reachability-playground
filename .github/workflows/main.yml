@@ -21,6 +21,7 @@ jobs:
   
   owasp-zap-full-scan:
     runs-on: ubuntu-latest
+    needs: [sonarscan]
     steps:
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.4.0
